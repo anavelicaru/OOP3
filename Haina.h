@@ -11,10 +11,13 @@ public:
     int temp();
     int color();
     int greutate();
-    void set_id(int n);
     bool costum();
+    int detergent;
+    void set_id(int n);
     bool operator <(const haina& h)const;
     bool operator == (const haina&f)const;
+    int getDetergent();
+    friend ifstream operator >> (ifstream & in, const haina& h)const;
 }
 
 int haina :: temp(){
@@ -38,4 +41,6 @@ bool haina :: operator < (const haina&f)const{
 bool haina :: operator == (const haina&f)const{
         return (id==h.id);
 }
-
+ifstream& operator >> (ifstream& in, const haina& h){
+        cin >> h.temp >> h.color >> h.greutate >> h.costum >> h.detergent;
+        return in;}
