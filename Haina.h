@@ -43,4 +43,5 @@ bool haina :: operator == (const haina&f)const{
 }
 ifstream& operator >> (ifstream& in, const haina& h){
         cin >> h.temp >> h.color >> h.greutate >> h.costum >> h.detergent;
-        return in;}
+        return in;
+}
