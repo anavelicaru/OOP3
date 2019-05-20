@@ -48,10 +48,9 @@ void Spalatorie::citireClient(client C){
     cin>>C.id;
     nrHaine = getNrHaine();
     for (i=1; i<=n; i++){
-      //  haine.ceva[i]=getCeva();
+        cin >> haine[i];
     }
-
-    }
+}
 
 
 
