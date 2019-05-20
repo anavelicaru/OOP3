@@ -1,40 +1,41 @@
 #pragma once
-//functiile le scriu in afara clasei!!
 class haina{
 private:
-    int id;
     int gr;
     int col;
     int temperatura;
     bool costum;
-
+protected:
+    int id;
 public:
-bool operator <(const haina& h)const
-{
-        return (id<h.id);
+    int temp();
+    int color();
+    int greutate();
+    void set_id(int n);
+    bool costum();
+    bool operator <(const haina& h)const;
+    bool operator == (const haina&f)const;
 }
-int temp()
-{
+
+int haina :: temp(){
     return temperatura;
 }
-bool operator == (const haina&f)const
-{
-  return (id==f.id);
+int haina :: color(){
+     return col;
 }
-int color()
-{ return col;
+int haina :: greutate(){
+     return greutate;
 }
-int greutate()
-{
- return gr;
-}
-void set_id(int n)
-{
+void haina :: set_id(int n){
   id=n;
 }
-bool costum()
-{
+bool haina :: costum(){
     return cost;
 }
+bool haina :: operator < (const haina&f)const{
+        return (id<h.id);
+}
+bool haina :: operator == (const haina&f)const{
+        return (id==h.id);
 }
 
